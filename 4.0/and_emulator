@@ -1,0 +1,11 @@
+
+androidDir=`pwd`
+imgDir="$androidDir/img/"
+sdkDir="$androidDir/sdk/tools"
+cmd="${sdkDir}/emulator -avd mydroid -system ${imgDir}system.img  -data ${imgDir}/userdata.img -ramdisk ${imgDir}/ramdisk.img  -kernel $imgDir/kernel-qemu-armv7 -sdcard /home/sin/wkspace/apk/sdcard.img"
+$cmd
+
+
+#~/wkspace/android/android-sdk_eng.sin_linux-x86/tools/./emulator -avd mydroid  -sdcard /home/sin/wkspace/apk/sdcard.img -memory 512 -partition-size 1024
+#~/wkspace/android/android-sdk_eng.sin_linux-x86/tools/./emulator -avd 54  -sdcard /home/sin/wkspace/apk/sdcard.img -memory 512 -partition-size 1024
+

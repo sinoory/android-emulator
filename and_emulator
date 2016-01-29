@@ -1,0 +1,12 @@
+
+androidDir="/home/sin/work/android/t1/"
+imgDir="out/target/product/generic/"
+sdkDir="out/host/linux-x86/sdk/android-sdk_eng.sin_linux-x86/tools"
+
+#androidDir="/home/sin/wkspace/apk/"
+#imgDir="evn/"
+#sdkDir="evn/tools/"
+
+#~/wkspace/android/android-sdk_eng.sin_linux-x86/tools/./emulator -avd mydroid  -sdcard /home/sin/wkspace/apk/sdcard.img -memory 512 -partition-size 1024
+
+${androidDir}${sdkDir}/emulator -avd mydroid -system ${androidDir}${imgDir}system.img  -data ${androidDir}${imgDir}/userdata.img -ramdisk ${androidDir}${imgDir}/ramdisk.img  -kernel ${androidDir}/prebuilt/android-arm/kernel/kernel-qemu-armv7 -sdcard /home/sin/wkspace/apk/sdcard.img

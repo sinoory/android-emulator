@@ -1,0 +1,11 @@
+
+problem:
+emulator: ERROR: unknown skin name 'WVGA800'
+
+sin@nfs ~/wkspace/android/android-sdk_eng.sin_linux-x86 $ ls platforms/android-4.0.1/skins/WVGA800/
+arrow_down.png  arrow_right.png  background_land.png  button.png    hardware.ini  key.png  select.png
+arrow_left.png  arrow_up.png     background_port.png  controls.png  keyboard.png  layout   spacebar.png
+
+resolve:
+sin@nfs ~/wkspace/android $ cp android-sdk_eng.sin_linux-x86 ~/wkspace/android/emulator/4.0/sdk -rf
+
