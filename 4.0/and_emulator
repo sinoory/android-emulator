@@ -7,7 +7,9 @@ sdcardsize=256
 sdcardfile="${androidDir}/../pub/img/${sdcardsize}sdcard.img"
 if [ ! -f $sdcardfile ];then
     echo "creating $sdcardfile ..."
-    ${sdkDir}/mksdcard ${sdcardsize}M ${sdcardfile}
+    cmd="${sdkDir}/mksdcard ${sdcardsize}M ${sdcardfile}"
+    echo $cmd
+    $cmd
 fi
 cmd="${sdkDir}/emulator -avd mydroid -system ${imgDir}system.img  -data ${imgDir}/userdata.img -ramdisk ${imgDir}/ramdisk.img  -kernel $imgDir/kernel-qemu-armv7 -sdcard ${sdcardfile} -memory 512 -partition-size 512 "
 echo $cmd
