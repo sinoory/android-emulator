@@ -1,5 +1,13 @@
 
 problem:
+file not found: need lib support to run 32bit exe on 64bit
+sudo -i
+cd /etc/apt/sources.list.d
+echo "deb http://old-releases.ubuntu.com/ubuntu/ raring main restricted universe multiverse" >ia32-libs-raring.list
+apt-get update
+apt-get install ia32-libs
+
+
 emulator: ERROR: unknown skin name 'WVGA800'
 
 sin@nfs ~/wkspace/android/android-sdk_eng.sin_linux-x86 $ ls platforms/android-4.0.1/skins/WVGA800/
